@@ -122,6 +122,7 @@ public class RegisterPatientFragmentController {
 
         NavigableFormStructure formStructure = RegisterPatientFormBuilder.buildFormStructure(app);
 
+        //patient.setUnknown(unknown); //add this after resolving core dependency
 //        if (unknown != null && unknown) {
 //            // TODO make "UNKNOWN" be configurable
 //            name.setFamilyName("UNKNOWN");
