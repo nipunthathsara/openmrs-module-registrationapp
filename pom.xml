@@ -35,7 +35,8 @@
 	</modules>
 	
 	<properties>
-		<openMRSVersion>1.9.9</openMRSVersion>
+		<!--<openMRSVersion>1.9.9</openMRSVersion>-->
+        <openMRSVersion>2.0.5</openMRSVersion>
         <uiframeworkVersion>3.9</uiframeworkVersion>
         <appframeworkVersion>2.9</appframeworkVersion>
         <springVersion>3.0.5.RELEASE</springVersion>

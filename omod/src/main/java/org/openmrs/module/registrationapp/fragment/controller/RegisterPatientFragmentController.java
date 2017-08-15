@@ -122,14 +122,16 @@ public class RegisterPatientFragmentController {
 
         NavigableFormStructure formStructure = RegisterPatientFormBuilder.buildFormStructure(app);
 
-        if (unknown != null && unknown) {
-            // TODO make "UNKNOWN" be configurable
-            name.setFamilyName("UNKNOWN");
-            name.setGivenName("UNKNOWN");
-            patient.addAttribute(new PersonAttribute(emrApiProperties.getUnknownPatientPersonAttributeType(), "true"));
-        }
-
+//        if (unknown != null && unknown) {
+//            // TODO make "UNKNOWN" be configurable
+//            name.setFamilyName("UNKNOWN");
+//            name.setGivenName("UNKNOWN");
+//            patient.addAttribute(new PersonAttribute(emrApiProperties.getUnknownPatientPersonAttributeType(), "true"));
+//
+//
         patient.addName(name);
+
+        patient.setUnknown(unknown);
         patient.addAddress(address);
 
         // handle birthdate estimate, if no birthdate but estimate present
