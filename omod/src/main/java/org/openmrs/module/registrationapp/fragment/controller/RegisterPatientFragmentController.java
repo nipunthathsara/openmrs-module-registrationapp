@@ -14,7 +14,6 @@ import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.Person;
 import org.openmrs.PersonAddress;
-import org.openmrs.PersonAttribute;
 import org.openmrs.PersonName;
 import org.openmrs.Relationship;
 import org.openmrs.RelationshipType;
@@ -122,13 +121,13 @@ public class RegisterPatientFragmentController {
 
         NavigableFormStructure formStructure = RegisterPatientFormBuilder.buildFormStructure(app);
 
+        //Commenting 'unknown patient - registration' specific logic from registrationApp
+        //Moving the functionality to openmrs-core
 //        if (unknown != null && unknown) {
 //            // TODO make "UNKNOWN" be configurable
 //            name.setFamilyName("UNKNOWN");
 //            name.setGivenName("UNKNOWN");
 //            patient.addAttribute(new PersonAttribute(emrApiProperties.getUnknownPatientPersonAttributeType(), "true"));
-//
-//
         patient.addName(name);
 
         patient.setUnknown(unknown);
